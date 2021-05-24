@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    box-sizing: content-box;
+}
+.h1title{
+    margin: 30px;
+}
+.profilephoto{
+    width: 250px;
+    border-radius: 5px;
+    margin-left: 23px;
+}
+/* BARRA DE NAVAGAÃ‡ÃƒO*/
+.navbody {
+    margin: 0;
+    display: flex;
+    height: 40px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: rgb(0, 0, 0);
+}
+
+.barindex {
+    padding: 0px 50px;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+}
+.barbutton {
+    color: rgb(0, 0, 0);
+    padding: 9px 25px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:all 0.3s ease 0s;
+}
+.barbutton:hover {
+    background-color: #b3b3b3;
+}
+/* BARRA DE NAVAGAÃ‡ÃƒO*/
+
+/* DIV APRESENTAÃ‡ÃƒO */
+.divprojcontainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    height: 33vh;
+    justify-content: center;
+    align-items: center;
+}
+.divperfiel{
+    justify-self: center;
+    width: 80vw;
+    margin: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+    "divnome divresumo" "divnome divresumo" ;
+}
+.divperfnome{
+    grid-area: "divnome";
+    background-color: #ffffff; 
+    box-shadow: 5px 5px 15px black; 
+    height: auto; 
+}
+
+.divperfresumo{
+    grid-area: "divresumo";
+    background-color: #ffffff;
+    box-shadow: 5px 5px 15px black;
+    height: auto;
+}
+/* DIV APRESENTAÃ‡ÃƒO */
+
+/* Projetos */
+.projetoscontainer {
+    justify-content: flex-start;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: #F4F4F4;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.projetobox {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr fr;
+    box-shadow: 5px 5px 15px black;
+    margin: 10px;
+    grid-template-areas: 
+    'grid-1 '
+    'grid-2 '
+    'grid-3 '
+    'grid-4 '
+    ;
+}
+.protitle {
+    text-decoration: none;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.protitle:hover {
+    color: rgb(179, 179, 179);
+}
+.grid-1{
+    grid-area: 'grid-1';
+    color: white;
+}
+.grid-2{
+    grid-area: 'grid-2';
+}
+.grid-3{    
+    grid-area: 'grid-3';
+    display: flex;
+    grid-auto-rows: min-content;
+
+}
+.grid-3tecname {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: gray ;
+    background-color: gray  ;
+    color: white;
+
+}
+.grid-4{
+    grid-area: 'grid-4';
+    height: min-content;
+}
+/* Projetos */

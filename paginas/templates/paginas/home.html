@@ -1,0 +1,56 @@
+{% extends 'paginas/main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="divperfiel">
+        <div class="divperfnome">
+            <h1 class="h1title">Kaique Mota</h1>
+            <div >
+                <img class="profilephoto" src="static/paginas/images/profile_pic.jpg" alt="">
+            </div>    
+        </div>
+        <div class="divperfresumo">
+            <h2 class="h1title">Sobre mim</h2>
+            <ul>
+                <li><p>Meu nome é Kaique,  tenho 19 anos,
+                    sou desenvolvedor back-end voltado pra web.
+                </p></li>
+                <li><p>Meus principais conhecimentos são em Python e Django. </p></li>
+                <li><p>Inglês tecnico</p></li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="divprojcontainer">
+        <div >
+            <h1>Estes são meus projetos</h1>
+        </div>
+                
+    </div>    
+    <main>
+        <div class="projetoscontainer">
+            {% for p in projetos %}
+                <div class="projetobox">
+                    <div class="grid-1">
+                        <h2 class="protitle"><a class="protitle" href="{% url 'projeto' p.slug %}">{{p.nome}}</a></h2>
+                    </div>
+                    <div class="grid-2">
+                        {% if p.imagem %}
+                        <p><img  src="{{p.imagem.url}}" alt=""></p>
+                        {% else %}
+                            <p>Não tem imagem</p>
+                        {% endif %}
+                    </div>                              
+                    <div class="grid-3">                       
+                        <p class="grid-3tecname">{{p.tec_nome.all|join:"-"}}</p>
+                    </div>
+                    <div class="grid-4">
+                        <p>{{p.descricao}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        
+    </main>
+    
+{% endblock %}

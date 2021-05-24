@@ -1,0 +1,10 @@
+{% extends 'paginas/main.html' %}
+{% load static %}
+
+{% block content %}
+    <main>
+        <p>{{projetos.nome}}</p>
+        <p>{{projetos.tec_nome.all|join:","}}</p>
+        <p>{{projetos.descricao}}</p>
+    </main>   
+{% endblock %}
