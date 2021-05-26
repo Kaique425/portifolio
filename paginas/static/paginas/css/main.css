@@ -106,7 +106,7 @@ body, html {
 
 .projetobox {
     display: grid;
-
+    width: min-content;
     box-shadow: 5px 5px 15px black;
     margin: 10px;
 }
@@ -143,10 +143,12 @@ body, html {
     border-color: gray ;
     background-color: gray  ;
     color: white;
+    justify-content: center;
 
 }
 .grid-4{
     margin-left: 10px;
+    text-overflow: clip;
     grid-area: 'grid-4';
     height: min-content;
 }

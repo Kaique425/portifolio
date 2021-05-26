@@ -41,11 +41,13 @@
                             <p>Não tem imagem</p>
                         {% endif %}
                     </div>                              
-                    <div class="grid-3">                       
-                        <p class="grid-3tecname">{{p.tec_nome.all|join:"-"}}</p>
+                    <div class="grid-3"> 
+                        {% for tec in p.tec_nome.all %} 
+                        <p class="grid-3tecname">{{tec}}</p>
+                        {% endfor %}
                     </div>
                     <div class="grid-4">
-                        <p>{{p.descricao}}</p>
+                        <p>{{p.descricao|truncatewords:10}}</p>
                     </div>
                 </div>
             {% endfor %}
