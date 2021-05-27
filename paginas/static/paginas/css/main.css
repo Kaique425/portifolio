@@ -7,7 +7,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 98vw;
     box-sizing: content-box;
 }
 .h1title{
@@ -153,3 +153,40 @@ body, html {
     height: min-content;
 }
 /* Projetos */
+
+/*Project Detail Page*/
+.projectdetailbody {
+    margin: 0;
+    width: auto;
+}
+.maincontainer{
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100vh;
+    width: 85vw;
+    grid-template-areas: 
+    "nameitem nameitem nameitem"
+    "imageitem imageitem descriptionitem "
+    "imageitem imageitem descriptionitem";
+    background-color: gray;
+}
+.nameitem {
+    border-style: solid;
+    grid-area: nameitem;
+
+}
+.imageitem {
+    border-style: solid;
+    width: fit-content;
+    grid-area: imageitem;
+}
+.tecnameitem {
+    border-style: solid;
+    grid-area: tecnameitem;
+}
+.descriptionitem {
+    border-style: solid;    
+    grid-area: descriptionitem;
+}
+/*Project Detail Page*/

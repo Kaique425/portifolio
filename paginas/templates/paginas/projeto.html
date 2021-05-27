@@ -2,9 +2,18 @@
 {% load static %}
 
 {% block content %}
-    <main>
-        <p>{{projetos.nome}}</p>
-        <p>{{projetos.tec_nome.all|join:","}}</p>
-        <p>{{projetos.descricao}}</p>
+    <main class="projectdetailbody">
+        <div class="maincontainer">
+            <div class="nameitem">
+                <p>{{projetos.nome}}</p>
+            </div>
+            <div class="imageitem">
+                <p><img src="{{projetos.imagem.url}}" alt=""></a></p>
+            </div>
+            <div class="descriptionitem">
+                <p>{{projetos.descricao}}</p>
+            </div> 
+        </div>
+
     </main>   
 {% endblock %}
