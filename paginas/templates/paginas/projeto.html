@@ -3,18 +3,18 @@
 
 {% block content %}
     <main class="projectdetailbody">
-        <div class="maincontainer">
-            <div class="nameitem">
-                <p>{{projetos.nome}}</p>
+        <section>
+            <div class="maincontainer">
+                <div class="nameitem">
+                    <p><a class="nameitemhref" href="">Clique aqui para ir até {{projetos.nome}}</a></p>
+                </div>
+                <div class="imageitem">
+                    <p><img style="width: 950px;" src="{{projetos.thumbnailDetail.url}}" alt=""></a></p>
+                </div>
+                <div class="descriptionitem">
+                    <p>{{projetos.descricao}}</p>
+                </div> 
             </div>
-            <div class="imageitem">
-                <p><img src="{{projetos.thumbnailHome.url}}" alt=""></a></p>
-                <p><img src="{{projetos.thumbnailDetail.url}}" alt=""></a></p>
-            </div>
-            <div class="descriptionitem">
-                <p>{{projetos.descricao}}</p>
-            </div> 
-        </div>
-
+        </section>
     </main>   
 {% endblock %}

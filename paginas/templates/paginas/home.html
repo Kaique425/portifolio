@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+<main>
     <div class="divperfiel">
         <div class="divperfnome">
             <div >
@@ -13,7 +14,7 @@
             <h2 class="h1title">Sobre mim</h2>
             <ul class="resumotext">
                 <li><p>Meu nome é Kaique,  tenho 19 anos,
-                    sou desenvolvedor back-end voltado pra web.
+                    sou desenvolvedor back-end.
                 </p></li>
                 <li><p>Meus principais conhecimentos são em Python e Django. </p></li>
                 <li><p>Inglês tecnico</p></li>
@@ -24,34 +25,32 @@
     <div class="divprojcontainer">
         <div >
             <h1>Projetos pessoais.</h1>
-        </div>
-                
-    </div>    
-    <main>
-        <div class="projetoscontainer">
-            {% for p in projetos %}
-                <div class="projetobox">
-                    <div class="grid-1">
-                        <h2 class="protitle"><a class="protitle" href="{% url 'projeto' p.slug %}">{{p.nome}}</a></h2>
+        </div>      
+        </div>    
+            <div class="projetoscontainer">
+                {% for p in projetos %}
+                    <div class="projetobox">
+                        <div class="grid-1">
+                            <h2 class="protitle"><a class="protitle" href="{% url 'projeto' p.slug %}">{{p.nome}}</a></h2>
+                        </div>
+                        <div class="grid-2">
+                            {% if p.thumbnailHome %}
+                            <p><img  src="{{p.thumbnailHome.url}}" alt=""></p>
+                            {% else %}
+                                <p style="text-align:center;">Não tem imagem</p>
+                            {% endif %}
+                        </div>                              
+                        <div class="grid-3"> 
+                            {% for tec in p.tec_nome.all %} 
+                            <p class="grid-3tecname">{{tec}}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="grid-4">
+                            <p>{{p.descricao|truncatewords:10}}</p>
+                        </div>
                     </div>
-                    <div class="grid-2">
-                        {% if p.thumbnailHome %}
-                        <p><img  src="{{p.thumbnailHome.url}}" alt=""></p>
-                        {% else %}
-                            <p style="text-align:center;">Não tem imagem</p>
-                        {% endif %}
-                    </div>                              
-                    <div class="grid-3"> 
-                        {% for tec in p.tec_nome.all %} 
-                        <p class="grid-3tecname">{{tec}}</p>
-                        {% endfor %}
-                    </div>
-                    <div class="grid-4">
-                        <p>{{p.descricao|truncatewords:10}}</p>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
+                {% endfor %}
+            </div>
         
     </main>
     
