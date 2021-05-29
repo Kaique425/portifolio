@@ -134,10 +134,12 @@ body, html {
     grid-area: 'grid-3';
     display: flex;
     grid-auto-rows: min-content;
+    align-items: flex-start
 
 }
 .grid-3tecname {
     margin-left: 10px;
+    margin-right: 10px;
     border-radius: 5px;
     border-style: solid;
     border-color: gray ;
