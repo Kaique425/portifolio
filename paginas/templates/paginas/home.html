@@ -4,10 +4,10 @@
 {% block content %}
     <div class="divperfiel">
         <div class="divperfnome">
-            <h1 class="h1title">Kaique Mota</h1>
             <div >
                 <img class="profilephoto" src="static/paginas/images/profile_pic.jpg" alt="">
-            </div>    
+            </div> 
+            <h1 class="h1title">Kaique Mota</h1>   
         </div>
         <div class="divperfresumo">
             <h2 class="h1title">Sobre mim</h2>
@@ -35,10 +35,10 @@
                         <h2 class="protitle"><a class="protitle" href="{% url 'projeto' p.slug %}">{{p.nome}}</a></h2>
                     </div>
                     <div class="grid-2">
-                        {% if p.imagem %}
-                        <p><img  src="{{p.imagem.url}}" alt=""></p>
+                        {% if p.thumbnailHome %}
+                        <p><img  src="{{p.thumbnailHome.url}}" alt=""></p>
                         {% else %}
-                            <p>Não tem imagem</p>
+                            <p style="text-align:center;">Não tem imagem</p>
                         {% endif %}
                     </div>                              
                     <div class="grid-3"> 
