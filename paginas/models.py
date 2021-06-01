@@ -13,6 +13,7 @@ class Tecnologias(models.Model):
 class Projeto(models.Model):
     nome = models.CharField(max_length=255)
     thumbnailHome = models.ImageField(upload_to='images', blank=True,null=True)
+    projlink = models.CharField(max_length=255, blank=True, null=True)
     thumbnailDetail = models.ImageField(upload_to='images', blank=True,null=True)
     slug = models.SlugField(max_length=255, unique=True)
     descricao = models.CharField(max_length=255)

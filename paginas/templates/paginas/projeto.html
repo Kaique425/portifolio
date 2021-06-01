@@ -6,8 +6,12 @@
         <section>
             <div class="maincontainer">
                 <div class="nameitem">
-                    <p><a class="nameitemhref" href="">Clique aqui para ir até {{projetos.nome}}</a></p>
-                </div>
+                {% if projetos.projlink == null%}
+                     <p><a class="nameitemhref" href="#">Clique aqui para ir até {{projetos.nome}}</a></p>
+                {% else %}
+                    <p><a class="nameitemhref" href="{{projetos.projlink}}">Clique aqui para ir até {{projetos.nome}}</a></p>
+                    </div>
+                {% endif %}
                 <div class="imageitem">
                     <img style="width: 80vw;" src="{{projetos.thumbnailDetail.url}}" alt=""></a>
                 </div>
