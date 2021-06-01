@@ -24,17 +24,18 @@ body, html {
     margin: 0;
     display: flex;
     height: 40px;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding: 10px 10%;
     background-color: rgb(0, 0, 0);
     align-items: center;
 }
 .barindexbutton {
-    padding-right: 600px;
+    margin-right: 20px;
     display: inline-block;
     color: rgb(255, 255, 255);
 }
 .barindex {
+    margin: 10px;
     padding: 0px 5px;
     display: inline-block;
     color: rgb(255, 255, 255);
@@ -192,6 +193,15 @@ body, html {
     text-decoration: none;
 }
 .nameitem {
+    width: 80vw;
+    background-color: black;
+    color: white;
+    box-shadow: 5px 5px 15px black;
+    grid-area: nameitem;
+    text-align: center;
+    font-size: 50px;
+}
+.nameitemnohref {
     width: 80vw;
     background-color: black;
     color: white;

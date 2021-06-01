@@ -5,11 +5,13 @@
     <main class="projectdetailbody">
         <section>
             <div class="maincontainer">
-                <div class="nameitem">
-                {% if projetos.projlink == null%}
-                     <p><a class="nameitemhref" href="#">Clique aqui para ir até {{projetos.nome}}</a></p>
+                {% if projetos.projlink == null %}
+                    <div class="nameitemnohref">
+                        <p>{{projetos.nome}}</p>
+                    </div>
                 {% else %}
-                    <p><a class="nameitemhref" href="{{projetos.projlink}}">Clique aqui para ir até {{projetos.nome}}</a></p>
+                    <div class="nameitem">
+                        <p><a class="nameitemhref" href="{{projetos.projlink}}">Clique aqui para ir até {{projetos.nome}}</a></p>
                     </div>
                 {% endif %}
                 <div class="imageitem">
