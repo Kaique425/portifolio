@@ -2,4 +2,5 @@ from django.apps import AppConfig
 
 
 class PaginasConfig(AppConfig):
-    name = 'apps.paginas'
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'paginas'
