@@ -1,14 +1,14 @@
 import environ
 
-from portifolio.settings.base import *
+from tutorialdjango.settings.base import *
 
 env = environ.Env()
 
-DEBUG = env.bool ("DEBUG", False)
+DEBUG = env.bool("DEBUG", False)
 
 SECRET_KEY = env("SECRET_KEY")
 
-ALLOWED_HOST = env.list("ALLOWED_HOST")
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
 
 DATABASES = {
     "default": env.db(),
