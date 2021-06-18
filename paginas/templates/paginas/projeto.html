@@ -14,9 +14,16 @@
                         <p><a class="nameitemhref" href="{{projetos.projlink}}">Clique aqui para ir até {{projetos.nome}}</a></p>
                     </div>
                 {% endif %}
-                <div class="imageitem">
-                    <img style="width: 80vw;" src="{{projetos.thumbnailDetail.url}}" alt=""></a>
-                </div>
+                {% if projetos.thumbnailDetail %}
+                   <div class="imageitem">
+                        <img style="width: 80vw;" src="{{projetos.thumbnailDetail.url}}" alt=""></a>
+                    </div>
+                {% else %}
+                    <div class="imageitem">
+                        <p>Não tem imagem.</p>
+                    </div>     
+                {% endif %}
+
                 <div class="descriptionitem">
                     <p>{{projetos.descricao}}</p>
                 </div> 
