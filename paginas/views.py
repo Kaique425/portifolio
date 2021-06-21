@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import *
 
 def home(request):
+    url = request.get_full_path()
     projetos = Projeto.objects.all()
     tecnologias = Tecnologias.objects.all()
     context = {'projetos':projetos, 'tecnologias':tecnologias}
