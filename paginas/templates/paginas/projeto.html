@@ -11,7 +11,7 @@
                     </div>
                 {% else %}
                     <div class="nameitem">
-                        <p><a class="nameitemhref" href="{{projetos.projlink}}">Clique aqui para ir até {{projetos.nome}}</a></p>
+                        <p class="namespace"><a class="nameitemhref" href="{{projetos.projlink}}">Ir até {{projetos.nome}}</a></p>
                     </div>
                 {% endif %}
                 {% if projetos.thumbnailDetail %}
@@ -25,7 +25,7 @@
                 {% endif %}
 
                 <div class="descriptionitem">
-                    <p>{{projetos.descricao}}</p>
+                    <p style="padding:7px">{{projetos.descricao}}</p>
                 </div> 
             </div>
         </section>

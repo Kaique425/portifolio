@@ -58,6 +58,9 @@ body, html {
     background-color: #b3b3b3;
 }
 @media screen and (max-width: 540px){
+    .namespace {
+        margin: 0px;
+    }
     .navbody {
         justify-content: center;
         flex-direction: column;
@@ -134,7 +137,7 @@ body, html {
 }
 .protitle {
     text-decoration: none;
-    text-align:center;
+    text-align: center;
     margin: auto;
     margin-bottom: 5px;
     height: 60px;
@@ -146,6 +149,7 @@ body, html {
     color: rgb(179, 179, 179);
 }
 .grid-1{
+    background-color: black;
     grid-area: 'grid-1';
     color: white;
 }
@@ -214,6 +218,7 @@ body, html {
     text-align: center;
     font-size: 50px;
 }
+
 .nameitemnohref {
     width: 80vw;
     background-color: black;
@@ -228,15 +233,15 @@ body, html {
     opacity: 0.7;
 }
 .imageitem {
-    box-shadow: 5px 5px 15px black;
+    box-shadow: 5px 5px 15px #0000008c;
     width: 80vw;
 }
 .tecnameitem {
-    box-shadow: 5px 5px 15px black;
+    box-shadow: 5px 5px 15px #0000008c;
 }
 .descriptionitem {
     width: 80vw;
-    box-shadow: 5px 5px 15px black;  
+    box-shadow: 5px 5px 15px #0000008c;  
     font-size: 20px;
 
 }

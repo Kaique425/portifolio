@@ -28,8 +28,8 @@
             <div class="projetoscontainer">
                 {% for p in projetos %}
                     <div class="projetobox">
-                        <div class="grid-1">
-                            <h2 class="protitle"><a class="protitle" href="{% url 'projeto' p.slug %}">{{p.nome}}</a></h2>
+                        <div class="grid-1">            
+                                <h2 style="text-align: center"><a class="protitle" href="{% url 'projeto' p.slug %}">{{p.nome}}</a></h2>
                         </div>
                         <div class="grid-2">
                             {% if p.thumbnailHome %}
