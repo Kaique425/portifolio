@@ -29,7 +29,7 @@
                 {% for p in projetos %}
                     <div class="projetobox">
                         <div class="grid-1">            
-                                <h2 style="text-align: center"><a class="protitle" href="{% url 'projeto' p.slug %}">{{p.nome}}</a></h2>
+                                <h2 style="text-align: center"><a class="protitle" href="{% url 'paginas:projeto' p.slug %}">{{p.nome}}</a></h2>
                         </div>
                         <div class="grid-2">
                             {% if p.thumbnailHome %}

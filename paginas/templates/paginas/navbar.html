@@ -5,7 +5,7 @@
             {% if request.get_full_path in 'https://frozen-fjord-09422.herokuapp.com/' %}
         
             {% else %}
-                <li class="barindexbutton"><a href="{% url 'home' %}"><button class="barbutton">Inicio</button></a></button></li>
+                <li class="barindexbutton"><a href="{% url 'paginas:home' %}"><button class="barbutton">Inicio</button></a></button></li>
             {% endif %}
         </div>
         <div>

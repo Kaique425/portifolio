@@ -9,5 +9,4 @@ admin.site.register(Tecnologias)
 class ProjetoAdmin(admin.ModelAdmin):
     list_display = ('nome','slug','projlink')
     #Auto-completar o campo slug
-    prepopulated_fields = {'slug':('nome',)}
                         

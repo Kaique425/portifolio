@@ -1,3 +1,4 @@
+from autoslug import AutoSlugField
 from enum import unique
 from django.db import models
 from django.db.models.fields import DateField
@@ -15,7 +16,7 @@ class Projeto(models.Model):
     thumbnailHome = models.ImageField(upload_to='images', blank=True,null=True)
     projlink = models.CharField(max_length=255, blank=True, null=True)
     thumbnailDetail = models.ImageField(upload_to='images', blank=True,null=True)
-    slug = models.SlugField(max_length=255, unique=True)
+    slug = slug = AutoSlugField(unique=True, always_update=False, populate_from="nome")
     descricao = models.CharField(max_length=255)
     #-Relação  de muito para muitos
     tec_nome = models.ManyToManyField(Tecnologias)
